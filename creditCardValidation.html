@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Validation</title>
+
+
+    <script>
+
+        // Luhn's algorithm to validate credit card numbers 
+        const creditCardValidation = (str) => {
+
+            str = str.replace(/\D/g, "");
+
+            let revStr = "";
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                revStr = revStr + str[i];
+            }
+
+            let doubleNum = revStr.split('').map((currElem, index) => {
+                if (index % 2 !== 0) {
+
+                    currElem = currElem * 2;
+
+                    if (currElem > 9) {
+                        currElem = currElem - 9;
+                    }
+
+                    
+                }
+                return currElem;
+            }).reduce((acc, curr) => acc + Number(curr), 0);
+
+            return doubleNum % 10 === 0;
+
+        }
+
+
+        console.log(creditCardValidation("4539 1488 0343 6467"));
+        console.log(creditCardValidation("8273 1232 7352 0569"));
+    </script>
+    </title>
+</head>
+
+<body>
+
+</body>
+
+</html>

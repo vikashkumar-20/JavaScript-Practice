@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Given object is Empty or Not !!</title>
+</head>
+
+<body>
+
+
+    <script>
+        function isEmptyObject(obj) {
+
+            // for (let key in obj) {
+            //     if(obj.hasOwnProperty(key))
+            //     return "Object is not Empty";
+            // }
+            // return "Object is Empty";
+
+            
+
+
+            return Object.keys(obj).length === 0 ? `Empty` : `Not Empty`
+
+
+        }
+
+        console.log(isEmptyObject({}))
+    </script>
+</body>
+
+</html>

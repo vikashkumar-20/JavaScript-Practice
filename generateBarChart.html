@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Bar Chart</title>
+
+</head>
+
+<body>
+
+
+    <script>
+        const generateBarChart = (arr) => {
+
+            const newArr = arr.map((currElem, index) => {
+                // let star = "";
+                // let number = 0;
+                // while (number < currElem) {
+                //     star = star + "*";
+                //     number++;
+                // }
+                // return `${index + 1}: ${star}`;
+
+                return `${index + 1}: ${"*".repeat(currElem)}`;
+            })
+            return newArr.join('\n');
+
+        }
+
+        console.log(generateBarChart([5, 3, 9, 2]));
+    </script>
+</body>
+
+</html>

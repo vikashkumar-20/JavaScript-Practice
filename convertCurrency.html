@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Currency</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const rates = {
+            USD: 1,
+            EUR: 0.9,
+            GBP: 0.8,
+            INR: 84,
+        };
+
+        const convertCurrency = (amount, curr1, curr2) => {
+
+            let amountInUSD = 0;
+
+            if (curr1 !== "USD") {
+
+                amountInUSD = amount / rates[curr1];
+            }
+            else
+            { 
+                amountInUSD = amount;
+                
+            }
+
+            let convertedAmount = 0 ; 
+
+            if(curr2 !== "USD")
+            {
+                convertedAmount = amountInUSD * rates[curr2]; 
+            }
+            else
+            {
+                convertedAmount = amountInUSD;
+            }
+
+            
+            return convertedAmount;
+
+
+        }
+
+        console.log(convertCurrency(100, "INR", "USD"))
+    </script>
+</body>
+
+</html>

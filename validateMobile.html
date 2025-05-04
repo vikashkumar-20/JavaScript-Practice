@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Mobile Number</title>
+</head>
+<body>
+    
+    <script>
+        let regex = /^[6-9][0-9]{9}$/;
+        const validateMobileNumber =  (phone) => { 
+
+            
+            return regex.test(phone);
+
+
+        }
+
+        console.log(validateMobileNumber("9523929950"))
+    </script>
+</body>
+</html>

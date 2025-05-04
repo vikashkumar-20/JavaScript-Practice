@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find age from Date of Birth</title>
+</head>
+<body>
+    
+
+    <script>
+        const calculateAge = (date) => { 
+
+                let currDate = new Date();
+                let birthDate = new Date(date);
+
+                let age = currDate.getFullYear() - birthDate.getFullYear();
+
+                let monthDiff = currDate.getMonth() - birthDate.getMonth();
+
+
+                if(monthDiff < 0 || (monthDiff === 0 && currDate.getDate() <  birthDate.getDate()))
+                { 
+                    age++;
+                }
+                return age;
+
+                
+
+                
+
+
+        }
+
+        console.log(calculateAge("2000-05-24"))
+
+    </script>
+</body>
+</html>

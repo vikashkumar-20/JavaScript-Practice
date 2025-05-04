@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 400px;">
+        <button onClick="applyColor()">Change Color</button>
+    </div>
+    <script>
+
+        const body = document.querySelector('body');
+
+        const randomHexColorGenerator = () => {
+
+            return `#${Math.random().toString(16).slice(3, 9).padEnd(6, 0)}`;
+        }
+
+        const applyColor = () => {
+            let color = randomHexColorGenerator();
+            body.style.backgroundColor = color;
+            console.log("Color is:", color)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression </title>
+</head>
+<body>
+    
+    <script>
+
+        // Write a function validateEmail(Email) that takes a string email as input
+        // returns  true if the email address is valid ac to the rules: 
+
+        let regex = /^[A-Za-z0-9]+(?:[.+_%][A-Za-z0-9]+)*@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+        const validateEmail =  (email) => { 
+            return regex.test(email);
+
+        }
+
+        console.log(validateEmail("@gmail.co.uk"))
+    </script>
+</body>
+</html>

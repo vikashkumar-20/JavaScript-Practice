@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz Challenge</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let arr = [];
+        function fizzbuzz(startNum, endNum) {
+            for (let i = startNum; i <= endNum; i++) {
+
+                if (i%3 === 0) {
+                    arr.push("Fizz");
+                }
+                else if(i%5 === 0)
+                {
+                    arr.push("Buzz");
+                }
+                else if(i%3 === 0 && i%5 === 0)
+                {
+                    arr.push("Fizzbuzz");
+                }
+                else
+                {
+                    arr.push(i);
+                }
+            }
+            return arr;
+
+        }
+
+        console.log(fizzbuzz(1, 15));
+    </script>
+</body>
+
+</html>
